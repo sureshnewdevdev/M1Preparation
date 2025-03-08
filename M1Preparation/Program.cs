@@ -6,8 +6,8 @@ namespace M1Preparation
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a word to check the given number is palindrome");
-            string sentense = Console.ReadLine().ToLower();
-
+            //string sentense = Console.ReadLine().ToLower();
+            string sentense = "SSSS";
             //string pracStr = " New   Madam    is from Karala she speak Malayalam.   She is a malayali   "; 
 
             string[] words = Cleanup(sentense);
@@ -29,6 +29,82 @@ namespace M1Preparation
                 //}
 
             }
+            int n = int.MaxValue;
+            int x = 0;
+            try
+            {
+
+                //string name = "Srikanth";
+                //name.Substring(10,10);
+
+                //checked
+                //{
+                //    n = n + 100;
+                //}
+
+                //words[1000] = "sdfsdfS";
+
+                ReverseString reverseString3 = new ReverseString();
+                reverseString.AnyFunction(0);
+
+
+            }
+            catch (System.ArgumentOutOfRangeException ex)
+            {
+                words[1000] = "sdfsdfS";
+
+                Console.WriteLine("Index out of range. Please try with in the limit. Thanks for your continous support");
+            }
+            catch (System.OverflowException ex)
+            {
+                Console.WriteLine(x);
+                Console.WriteLine("Too Big number to Handle . Please try with smaller number. Thanks for your continous support");
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Limit is reached, . Please try later. Thanks for your continous support");
+            }
+            catch (MyOwnException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error now. Please try later. Thanks for your continous support");
+            }
+            finally // memory clean up
+            {
+                Console.WriteLine("Finally block");
+            }
+
+            ReverseString reverseString1 = new ReverseString();
+            try
+            {
+                var result = reverseString1.AnyFunction(2);
+                //words[10000] = "dssdfds";
+            }
+            catch(MyOwnException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+               
+            }
+
+            try
+            {
+                words[10000] = "dssdfds";
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Internal error");
+            }
+
+
             //if (reverseString.IsPalindrome(word))
             //{
             //    Console.WriteLine("The given word is palindrome");
@@ -78,6 +154,13 @@ namespace M1Preparation
         {
             string reverse = Reverse(strInput);
             return strInput.Equals(reverse);
+        }
+
+        public int  AnyFunction(int n)
+        {
+            if (n==0)
+                throw new MyOwnException();
+            return n * 2;
         }
     }
 }

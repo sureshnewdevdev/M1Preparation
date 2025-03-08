@@ -20,7 +20,7 @@ namespace M1Preparation
 
     public class Class1
     {
-        public static void Main(string[] args)
+        public static void Main22(string[] args)
         {
             Object obj = new Object();
             obj = 10; // Boxing
